@@ -608,6 +608,12 @@ for the purposes of the AJAX comment editor #}
   {%- include "widgets/user_long_score_and_badge_summary.html" -%}
 {%- endmacro -%}
 
+{%- macro user_long_score_and_badge_summary_pearsonstrap(
+    user, karma_mode=None, badges_mode = None
+) -%}
+  {%- include "widgets/user_long_score_and_badge_summary_pearsonstrap.html.html" -%}
+{%- endmacro -%}
+
 {%- macro country_flag(country_code, flag_label) -%}
     <img 
         class="flag"

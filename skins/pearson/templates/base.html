@@ -44,12 +44,7 @@
         {% endif %}
     </head>
     <body class="{% block body_class %}{% endblock %}{% if user_messages %} user-messages{% endif %}{% if page_class %} {{page_class}}{% endif %}{% if request.user.is_anonymous() %} anon{% endif %} lang-{{ current_language_code }}">
-	    	<div class="pearson-bar-blue">
-	        <div class="container">
-	        	<div class="pearson">Pearson</div>
-	        	<div class="always-learning">Always Learning</div>
-	        </div>
-	    </div>
+	   
         {% include "widgets/system_messages.html" %}
         {% include "debug_header.html" %}
         {% if settings.MULTILINGUAL %}
