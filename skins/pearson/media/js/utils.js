@@ -3971,7 +3971,32 @@ AutoCompleter.prototype.setCaret = function(pos) {
 
 
 $(function() {
+
+  getTargetFromEvent = function ( ev ) {
+    var targ;
+  
+    if (!ev) ev = window.event;
+    if (ev.target) targ = ev.target;
+    else if (ev.srcElement) targ = ev.srcElement;
+    if (targ.nodeType == 3) // defeat Safari bug
+      targ = targ.parentNode;
+      
+    return targ;
+  };
+
+
 	$('.reputation_pearson').tooltip({
 		placement: 'bottom'
 	})
+  
+  $('.pearsonstrap_notify').bind('closed.bs.alert', function () {
+    window.notify.close();
+  });
+
+  $('.pearsonstrap_notify').bind('click', function (ev) {
+    if (getTargetFromEvent(ev).className.indexOf("pearsonstrap_notify") === 0) { //this element clicked - not any of children
+      window.notify.close();
+      $(this).alert('close');
+    }
+  })
 });
