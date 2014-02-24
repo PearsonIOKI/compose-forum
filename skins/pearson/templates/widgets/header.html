@@ -1,20 +1,16 @@
 <!-- template header.html -->
 {% import "macros.html" as macros %}
-<div 
-    id="header"
-    class="{% if settings.SHOW_LOGO %}with-logo{% else %}without-logo{% endif %}"
->
-    <div class="content-wrapper">
-        <div id="userToolsNav">
-            {% include "widgets/user_navigation.html" %}
-        </div>
-        {% if settings.SHOW_LOGO %}
-            {% include "widgets/logo.html" %}
-        {% endif %}
-        <div id="metaNav">
-            {% include "widgets/meta_nav.html" %}
-        </div>
-        <div class="clean"></div>
-    </div>
-</div>
-<!-- end template header.html -->
+
+
+<header  class="navbar navbar-default">
+	<div class="container">
+		<a class="sr-only" href="#content">Skip navigation</a>
+		<nav class="navbar-collapse collapse">
+			{% include "widgets/meta_nav.html" %}
+			<span id="userToolsNav_pearson">
+				{% include "widgets/user_navigation.html" %}
+			</span>
+		</nav><!--/.navbar-collapse -->
+	</div><!--/.navbar container -->
+</header><!--/.navbar -->
+

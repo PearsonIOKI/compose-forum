@@ -55,7 +55,8 @@
 <script type="text/javascript" src='{{"/bootstrap/js/bootstrap.js"|media}}'></script>
 <!-- History.js --> 
 <script type='text/javascript' src="{{"/js/jquery.history.js"|media }}"></script>
-<script type='text/javascript' src="{{"/js/utils.js"|media }}"></script>
+
+<script type="text/javascript" src="{{"/js/utils.js"|media }}"></script>
 <script type="text/javascript" src="{{'/js/live_search.js'|media}}"></script>
 {% endcompress %}
 <script type="text/javascript">
@@ -102,7 +103,7 @@
             var group_dropdown = new GroupDropdown({{ group_list }});
             $('.dropdown').append(group_dropdown.getElement());
         }
-        var userRep = $('#userToolsNav .reputation');
+        var userRep = $('#userToolsNav_pearson .reputation');
         if (userRep.length) {
             var showPermsTrigger = new ShowPermsTrigger();
             showPermsTrigger.decorate(userRep);

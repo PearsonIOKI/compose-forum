@@ -1,29 +1,28 @@
-{% import "macros.html" as macros%}
-<a 
-  id="navTags"
-  href="{% url tags %}"
-  {% if active_tab == 'tags' %}class="on"{% endif %}
->{% trans %}tags{% endtrans %}</a>
-{% if settings.GROUPS_ENABLED %}
-<span class="dropdown">
-<a
-  id="navGroups" 
-  {% if active_tab == 'groups' %}class="on"{% endif %}
-  href="{% url groups %}" data-target="#" >
-  {% trans %}people & groups{% endtrans %}
-</a>
-</span>
-{%else%}
-<a 
-  id="navUsers"
-  href="{% url users %}"
-  {% if active_tab == 'users' %}class="on"{% endif %}
->{% trans %}users{% endtrans %}</a>
-{% endif %}
-{% if settings.BADGES_MODE == 'public' %}
-<a 
-  id="navBadges"
-  href="{% url badges %}"
-  {% if active_tab == 'badges' %}class="on"{% endif %}
->{% trans %}badges{% endtrans %}</a>
-{% endif %}
+<ul id="menu" class="nav navbar-nav navbar-left">
+<a class="pearson-brand" href="/">PearsonStrap Home</a>
+	<li  {% if active_tab == 'tags' %}class="active"{% endif %}>
+		<a href="{% url tags %}"><i class="icon-tags"></i> {% trans %}tags{% endtrans %}</a>
+	</li>
+	{% if settings.GROUPS_ENABLED %}
+		<li  {% if active_tab == 'groups' %}class="active"{% endif %}>
+			<a href="{% url groups %}"><i class="icon-user"></i> {% trans %}people & groups{% endtrans %}</a>
+		</li>
+		<span class="dropdown">
+		<a
+		  id="navGroups" 
+		  {% if active_tab == 'groups' %}class="on"{% endif %}
+		  href="{% url groups %}" data-target="#" >
+		  {% trans %}people & groups{% endtrans %}
+		</a>
+		</span>
+	{%else%}
+		<li {% if active_tab == 'users' %}class="active"{% endif %}>
+			<a href="{% url users %}"><i class="icon-user"></i> {% trans %}users{% endtrans %}</a>
+		</li>
+	{% endif %}
+	{% if settings.BADGES_MODE == 'public' %}
+	<li {% if active_tab == 'badges' %}class="active"{% endif %}>
+		<a href="{% url badges %}"><i class="icon-certificate"></i> {% trans %}badges{% endtrans %}</a>
+	</li>
+	{% endif %}
+</ul>
