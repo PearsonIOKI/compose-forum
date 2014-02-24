@@ -1,3 +1,4 @@
+.askbot-venv
 *.pyc
 *.swp
 *.log

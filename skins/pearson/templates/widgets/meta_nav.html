@@ -1,0 +1,28 @@
+<ul id="menu" class="nav navbar-nav navbar-left">
+<a class="pearson-brand" href="/">PearsonStrap Home</a>
+	<li  {% if active_tab == 'tags' %}class="active"{% endif %}>
+		<a href="{% url tags %}"><i class="icon-tags"></i> {% trans %}tags{% endtrans %}</a>
+	</li>
+	{% if settings.GROUPS_ENABLED %}
+		<li  {% if active_tab == 'groups' %}class="active"{% endif %}>
+			<a href="{% url groups %}"><i class="icon-user"></i> {% trans %}people & groups{% endtrans %}</a>
+		</li>
+		<span class="dropdown">
+		<a
+		  id="navGroups" 
+		  {% if active_tab == 'groups' %}class="on"{% endif %}
+		  href="{% url groups %}" data-target="#" >
+		  {% trans %}people & groups{% endtrans %}
+		</a>
+		</span>
+	{%else%}
+		<li {% if active_tab == 'users' %}class="active"{% endif %}>
+			<a href="{% url users %}"><i class="icon-user"></i> {% trans %}users{% endtrans %}</a>
+		</li>
+	{% endif %}
+	{% if settings.BADGES_MODE == 'public' %}
+	<li {% if active_tab == 'badges' %}class="active"{% endif %}>
+		<a href="{% url badges %}"><i class="icon-certificate"></i> {% trans %}badges{% endtrans %}</a>
+	</li>
+	{% endif %}
+</ul>

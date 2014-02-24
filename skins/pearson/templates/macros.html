@@ -611,7 +611,7 @@ for the purposes of the AJAX comment editor #}
 {%- macro user_long_score_and_badge_summary_pearsonstrap(
     user, karma_mode=None, badges_mode = None
 ) -%}
-  {%- include "widgets/user_long_score_and_badge_summary_pearsonstrap.html.html" -%}
+  {%- include "widgets/user_long_score_and_badge_summary_pearsonstrap.html" -%}
 {%- endmacro -%}
 
 {%- macro country_flag(country_code, flag_label) -%}
@@ -807,6 +807,23 @@ for the purposes of the AJAX comment editor #}
                 title="{% trans %}no new responses yet{% endtrans %}"
             {% endif %}
         />
+    </a>
+    {% endif %}
+{%- endmacro -%}
+
+{%- macro inbox_link_pearson(user) -%}
+    {% if user.new_response_count > 0 or user.seen_response_count > 0 %}
+    <a id='ab-responses' href="{{user.get_absolute_url()}}?sort=inbox&section=forum">
+        <img 
+            alt="{% trans username=user.username|escape %}responses for {{username}}{% endtrans %}"
+            {% if user.new_response_count > 0 %}
+                src="{{ "/images/mail-envelope-full.png"|media }}"
+                title="{% trans response_count=user.new_response_count %}you have {{response_count}} new response{% pluralize %}you have {{response_count}} new responses{% endtrans %}"
+            {% elif user.seen_response_count > 0 %}
+                src="{{ "/images/mail-envelope-empty.png"|media }}"
+                title="{% trans %}no new responses yet{% endtrans %}"
+            {% endif %}
+        /> Inbox
     </a>
     {% endif %}
 {%- endmacro -%}

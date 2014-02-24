@@ -1,0 +1,34 @@
+<ul class="nav navbar-nav navbar-right">
+{%- if request.user.is_authenticated() -%}
+
+		<li class="dropdown ">
+			<a href="{{ request.user.get_absolute_url() }}" class="dropdown-toggle" data-toggle="dropdown">{{ request.user.username|escape }} <i class="icon-caret-down"></i></a>
+			<ul class="dropdown-menu">
+				<li ><a href="{{ request.user.get_absolute_url() }}">Profile</a></li>
+				<li>
+				{%- if settings.KARMA_MODE != 'hidden' or settings.BADGES_MODE != 'hidden' -%}
+					{{ macros.user_long_score_and_badge_summary_pearsonstrap(
+													user,
+													karma_mode=settings.KARMA_MODE,
+													badges_mode=settings.BADGES_MODE
+												)
+					}}
+				{%- endif -%}
+				</li>
+				<li >{{ macros.inbox_link_pearson(request.user)}}</li>
+				{% if request.user.is_authenticated() and request.user.is_administrator() %}
+					<li ><a href="{% url site_settings %}">{% trans %}settings{% endtrans %}</a></li>
+					<li ><a href="{% url widgets %}">{% trans %}widgets{% endtrans %}</a></li>
+				{% endif %}
+				<li ><a  href="{% url "help" %}" title="{% trans %}help{% endtrans %}">{% trans %}help{% endtrans %}</a></li>
+				{% if settings.USE_ASKBOT_LOGIN_SYSTEM %}
+					<li ><a href="{{ settings.LOGOUT_URL }}?next={{ settings.LOGOUT_REDIRECT_URL }}">{% trans %}sign out{% endtrans %}</a></li>
+				{% endif %}
+			</ul>
+		</li>
+
+{% elif settings.USE_ASKBOT_LOGIN_SYSTEM %}
+	<li><a href="{{ settings.LOGIN_URL }}?next={{request.path|clean_login_url|escape}}">{% trans %}Hi there! Please sign in{% endtrans %}</a></li>
+	<li ><a  href="{% url "help" %}" title="{% trans %}help{% endtrans %}">{% trans %}help{% endtrans %}</a></li>
+{% endif %}
+	</ul>

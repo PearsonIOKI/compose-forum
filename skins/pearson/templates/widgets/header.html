@@ -1,0 +1,16 @@
+<!-- template header.html -->
+{% import "macros.html" as macros %}
+
+
+<header  class="navbar navbar-default">
+	<div class="container">
+		<a class="sr-only" href="#content">Skip navigation</a>
+		<nav class="navbar-collapse collapse">
+			{% include "widgets/meta_nav.html" %}
+			<span id="userToolsNav_pearson">
+				{% include "widgets/user_navigation.html" %}
+			</span>
+		</nav><!--/.navbar-collapse -->
+	</div><!--/.navbar container -->
+</header><!--/.navbar -->
+
