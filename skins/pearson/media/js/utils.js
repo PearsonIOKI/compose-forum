@@ -2488,6 +2488,10 @@ GroupDropdown.prototype.createDom =  function(){
     this._add_link.attr('href', '#');
     this._add_link.attr('class', 'group-name');
     this._add_link.text(gettext('add new group'));
+    
+    $(this._add_link).on('click', function (ev) {
+      ev.stopPropagation(); //prevents dorpdown menu to hide after clicking on label
+    })
 
     for (var i=0; i<this._group_list.length; i++){
         var li = this.makeElement('li');

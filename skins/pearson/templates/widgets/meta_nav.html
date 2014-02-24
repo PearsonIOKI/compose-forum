@@ -4,17 +4,9 @@
 		<a href="{% url tags %}"><i class="icon-tags"></i> {% trans %}tags{% endtrans %}</a>
 	</li>
 	{% if settings.GROUPS_ENABLED %}
-		<li  {% if active_tab == 'groups' %}class="active"{% endif %}>
-			<a href="{% url groups %}"><i class="icon-user"></i> {% trans %}people & groups{% endtrans %}</a>
+		<li  class="groups_dropdown dropdown {% if active_tab == 'groups' %}active{% endif %}">
+			<a href="{% url groups %}"  class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> {% trans %}people & groups{% endtrans %} <i class="icon-caret-down"></i></a>
 		</li>
-		<span class="dropdown">
-		<a
-		  id="navGroups" 
-		  {% if active_tab == 'groups' %}class="on"{% endif %}
-		  href="{% url groups %}" data-target="#" >
-		  {% trans %}people & groups{% endtrans %}
-		</a>
-		</span>
 	{%else%}
 		<li {% if active_tab == 'users' %}class="active"{% endif %}>
 			<a href="{% url users %}"><i class="icon-user"></i> {% trans %}users{% endtrans %}</a>
