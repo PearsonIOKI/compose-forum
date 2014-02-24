@@ -101,7 +101,7 @@
         if (askbot['settings']['groupsEnabled']) {
             askbot['urls']['add_group'] = "{% url add_group %}";
             var group_dropdown = new GroupDropdown({{ group_list }});
-            $('.dropdown').append(group_dropdown.getElement());
+            $('.groups_dropdown').append(group_dropdown.getElement());
         }
         var userRep = $('#userToolsNav_pearson .reputation');
         if (userRep.length) {
