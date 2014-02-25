@@ -1,3 +1,16 @@
 body {
 	background-color: #fff;
 }
+
+button.close {
+  box-shadow: initial;
+}
+
+body.user-messages {
+  margin-top: initial;
+}
+
+.pearsonstrap_notify {
+  text-align: center;
+  margin-bottom: initial;
+}
