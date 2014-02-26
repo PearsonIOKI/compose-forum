@@ -1,14 +1,17 @@
 {% if active_tab != "ask" %}
-    {% if not search_state %}  {#  get empty SearchState() if there's none #}
-        {% set search_state=search_state|get_empty_search_state %}
+{% if not search_state %}  {#  get empty SearchState() if there's none #}
+{% set search_state=search_state|get_empty_search_state %}
+{% endif %}
+<a class="btn btn-success btn" role="button"
+   href="{{ search_state.full_ask_url() }}{% if group %}{% if '?' in search_state.full_ask_url() %}&amp;{% else %}?{% endif %}group_id={{ group.id }}{% endif %}">
+    <div class="circle">
+        <i class="icon-plus"></i>
+    </div>
+    {% if group %}
+    {{ settings.WORDS_ASK_THE_GROUP|escape }}
+    {% else %}
+    {{ settings.WORDS_ASK_YOUR_QUESTION|escape }}
     {% endif %}
-    <a
-        id="askButton"
-        class="button"
-        href="{{ search_state.full_ask_url() }}{% if group %}{% if '?' in search_state.full_ask_url() %}&amp;{% else %}?{% endif %}group_id={{ group.id }}{% endif %}"
-        >{% if group %}
-            {{ settings.WORDS_ASK_THE_GROUP|escape }}
-        {% else %}
-            {{ settings.WORDS_ASK_YOUR_QUESTION|escape }}
-        {% endif %}</a>
+</a>
+
 {% endif %}
