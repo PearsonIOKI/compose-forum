@@ -3978,13 +3978,13 @@ $(function() {
 
   getTargetFromEvent = function ( ev ) {
     var targ;
-  
+
     if (!ev) ev = window.event;
     if (ev.target) targ = ev.target;
     else if (ev.srcElement) targ = ev.srcElement;
     if (targ.nodeType == 3) // defeat Safari bug
       targ = targ.parentNode;
-      
+
     return targ;
   };
 
@@ -3992,7 +3992,7 @@ $(function() {
 	$('.reputation_pearson').tooltip({
 		placement: 'bottom'
 	})
-  
+
   $('.pearsonstrap_notify').bind('closed.bs.alert', function () {
     window.notify.close();
   });

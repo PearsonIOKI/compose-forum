@@ -6,7 +6,7 @@
 /* CSS3 Elements */
 /* Library of predifined less functions styles */
 /* ----- General HTML Styles----- */
-body {
+/*body {
   background: #FFF;
   font-size: 14px;
   line-height: 150%;
@@ -150,9 +150,9 @@ blockquote {
 }
 html {
   overflow-y: scroll;
-}
+}*/
 /* http://pathfindersoftware.com/2007/09/developers-note-2/ */
-* html .clearfix,
+/** html .clearfix,
 * html .paginator {
   height: 1;
   overflow: visible;
@@ -160,7 +160,7 @@ html {
 + html .clearfix,
 + html .paginator {
   min-height: 1%;
-}
+}*/
 .clearfix:after,
 .paginator:after {
   clear: both;
@@ -631,7 +631,7 @@ body.user-messages {
 .input-tool-tip.dimmed {
   color: #ccc;
 }
-input[type="submit"].searchBtn {
+/*input[type="submit"].searchBtn {
   font-size: 10px;
   color: #666;
   background-color: #eee;
@@ -652,7 +652,7 @@ input[type="submit"].searchBtn {
   box-shadow: 0 0 0 #929292;
   cursor: pointer;
   z-index: 10001;
-}
+}*/
 .groups-page input[type="submit"].searchBtn,
 .badges-pages input[type="submit"].searchBtn,
 .user-profile-page input[type="submit"].searchBtn,
@@ -676,7 +676,7 @@ input[type="submit"].searchBtn {
 .ask-page .search-drop-menu.empty ul {
   padding: 0;
 }
-input[type="submit"].searchBtn:hover {
+/*input[type="submit"].searchBtn:hover {
   background-image: none;
   background: -146px -37px url(../images/sprites.png) no-repeat;
 }
@@ -702,8 +702,8 @@ input[type="button"].cancelSearchBtn {
 }
 .cancelSearchBtn:hover {
   color: #d84040;
-}
-button,
+}*/
+/*button,
 input[type="submit"],
 input[type="button"],
 input[type="reset"],
@@ -776,7 +776,7 @@ input[type="submit"].link {
 }
 input[type="submit"].link:hover {
   text-decoration: underline;
-}
+}*/
 form.ajax-file-upload {
   height: 60px;
   position: relative;

@@ -40,3 +40,77 @@ body.user-messages {
   white-space: nowrap;
   overflow: hidden;
 }
+
+/* Secondary header styles
+     -------------------------------------------------- */
+#NewSearchBar {
+    width: 350px;
+    margin-right: 20px;
+}
+
+input[type="button"].cancelSearchBtn {
+    background: none repeat scroll 0 0 #FFFFFF !important;
+    border: 0 none;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 14px !important;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 40px;
+    top: 9px;
+    z-index: 10001;
+}
+
+.icon-search {
+    border: none;
+    background: none;
+    position: absolute;
+    right: 8px;
+    top: 11px;
+}
+
+input[type="submit"].searchBtn {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    height: 21px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: -3px;
+    top: 0;
+    width: 20px;
+}
+
+.input-tool-tip {
+    color: #999999;
+    left: 15px;
+    position: absolute;
+    top: 7px;
+}
+
+.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+
+}
+
+.circle {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 50%;
+    box-shadow: -1px -1px #CCCCCC;
+    display: inline-block;
+    height: 14px;
+    margin-right: 5px;
+    position: relative;
+    vertical-align: middle;
+    width: 14px;
+}
+
+.icon-plus {
+    color: #449D44;
+    font-size: 10px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+}
