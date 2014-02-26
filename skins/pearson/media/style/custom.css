@@ -14,3 +14,29 @@ body.user-messages {
   text-align: center;
   margin-bottom: initial;
 }
+
+ /* Sticky footer styles
+      -------------------------------------------------- */
+
+.pearson_footer_wrapper {
+  width: 100%;
+  clear: both;
+  background: #364395;
+
+}
+
+.composeforum-brand {
+  float: left;
+  display: block;
+  width: 115px;
+  height: 50px;
+  padding: 0;
+  margin: 0 20px 0 0;
+  font-size: 20px;
+  font-weight: 200;
+  color: #fff;
+  background-image: url("../images/composeforum.png");
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+}
