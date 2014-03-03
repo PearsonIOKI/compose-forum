@@ -6,15 +6,14 @@
     {% endif %}
     {% if tags.object_list %}
         <div class='clearfix'></div>
-        <ul class='tags'>
+        <ul class='categories-list'>
             {% for tag in tags.object_list %}
             <li>
                 {{ macros.tag_widget(
                             tag=tag.name,
                             html_tag='div',
                             truncate_long_tag=True,
-                            extra_content='<span class="tag-number">&#215; ' ~
-                                            tag.used_count|intcomma ~ '</span>'
+                            extra_content=' <div class="description">Category description here...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur euismod urna, suscipit semper felis laoreet ut. Proin congue libero non malesuada egestas. Praesent tincidunt consequat sem, consectetur ornare eros varius sed. Curabitur laoreet lectus vitae dui porttitor, sit amet dignissim massa iaculis.</div><div class="clearfix"></div>'
                     )
                 }}
             </li>

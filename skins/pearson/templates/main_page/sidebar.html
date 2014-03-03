@@ -1,18 +1,16 @@
 {% import "macros.html" as macros %}
 
 {% if 'SIDEBAR_MAIN_HEADER'|show_block_to(request.user) %}
-<div class="box">
-    {{ settings.SIDEBAR_MAIN_HEADER }}
-</div>
+
 {% endif %}
 
 {% if contributors and settings.SIDEBAR_MAIN_SHOW_AVATARS %}
     {% include "widgets/contributors.html" %}
 {% endif %}
 
-{% if settings.TAG_SEARCH_INPUT_ENABLED %}
+<!--{% if settings.TAG_SEARCH_INPUT_ENABLED %}
     {% include "main_page/tag_search.html" %}
-{% endif %}
+{% endif %}-->
 
 {% if request.user.is_authenticated() and settings.SIDEBAR_MAIN_SHOW_TAG_SELECTOR %} 
     {% include "widgets/tag_selector.html" %}

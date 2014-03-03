@@ -306,9 +306,9 @@ poor design of the data or methods on data objects #}
       {% set search_state=search_state|get_empty_search_state %}
   {% endif %}
   {% spaceless %}
-    <{{ html_tag }} class="tag-left{% if deletable %} deletable-tag{% endif %}">
+    <{{ html_tag }} class="tag-li{% if deletable %} deletable-tag{% endif %}">
     <{% if not is_link or tag[-1] == '*' %}span{% else %}a{% endif %}
-            class="tag tag-right{% if css_class %} {{ css_class }}{% endif %}"
+            class="tag small tag-a{% if css_class %} {{ css_class }}{% endif %}"
             {% if is_link %}
             href="{{ search_state.add_tag(tag).full_url() }}"
             {% endif %}
@@ -510,12 +510,12 @@ for the purposes of the AJAX comment editor #}
         <a id="by_{{key_name}}"
            href="{{ search_state.change_sort(key_name+"-desc").full_url() }}"
            class="rev on"
-           title="{{desc_tooltip}}"><span>{{label}} &#9650;</span></a>
+           title="{{desc_tooltip}}"><span>{{label}} <i class="icon-caret-down"></i></span></a>
     {% elif current_sort_method == key_name + "-desc" %}{# "best first" #}
         <a id="by_{{key_name}}"
            href="{{ search_state.change_sort(key_name+"-asc").full_url() }}"
            class="rev on"
-           title="{{asc_tooltip}}"><span>{{label}} &#9660;</span></a>
+           title="{{asc_tooltip}}"><span>{{label}} <i class="icon-caret-down"></i></span></a>
     {% else %}{# default, when other button is active #}
         <a id="by_{{key_name}}"
            href="{{ search_state.change_sort(key_name+"-desc").full_url() }}"
