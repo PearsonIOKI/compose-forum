@@ -14,7 +14,9 @@ body.user-messages {
   text-align: center;
   margin-bottom: initial;
 }
-
+header.navbar.navbar-default{
+    border-radius: 0;
+}
  /* Sticky footer styles
       -------------------------------------------------- */
 
@@ -41,8 +43,18 @@ body.user-messages {
   overflow: hidden;
 }
 
+.composeforum-brand:hover {
+    background-position: 0 50px;
+}
+
 /* Secondary header styles
      -------------------------------------------------- */
+#myTab{
+    padding-left: 20px;
+}
+.ask-button-widget{
+    padding-right: 20px;
+}
 #NewSearchBar {
     width: 350px;
     margin-right: 20px;
@@ -113,4 +125,197 @@ input[type="submit"].searchBtn {
     position: absolute;
     right: 3px;
     top: 3px;
+}
+
+#SortBar a{
+    color: #999;
+    padding: 0 7px;
+}
+#SortBar{
+    margin-top: 32px;
+}
+#SortBar a.on{
+    color: #428bca;
+    font-weight: bold;
+}
+
+.triangle{
+    font-size: 8px;
+}
+
+.short-summary {
+    border-bottom: 1px solid #DDDBCE;
+    padding: 1px 0 3px 10px;
+    width: 830px;
+}
+
+.short-summary .counts {
+    margin: 20px 0 0 5px;
+}
+.short-summary .votes, .short-summary .answers, .short-summary .favorites, .short-summary .views{
+    border: 1px solid #DDDBCE;
+    float: right;
+    height: 50px;
+    margin: 0 4px;
+    padding: 4px 2px 0;
+    text-align: center;
+    width: 70px;
+    border-radius: 5px;
+}
+
+.short-summary .counts .votes div, .short-summary .counts .views div, .short-summary .counts .answers div, .short-summary .counts .favorites div, .short-summary .counts .item-count{
+    color: #428BCA;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.short-summary h2 a, .h2 {
+    font-size: 24px;
+    color: #333 !important;
+}
+
+ul.tags, ul.tags.marked-tags, ul#related-tags {
+    display: block;
+    line-height: 170%;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0 0 0 1px;
+}
+
+.tags a.tag-a, .tags span.tag-a {
+    border: 1px solid #999999;
+    border-radius: 4px;
+    color: #333333;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 5px;
+    text-decoration: none;
+}
+
+.userinfo .timeago {
+    font-weight: normal;
+    text-decoration: none;
+    border-bottom: none;
+    color: #999;
+    cursor: pointer !important;
+}
+.userinfo a{
+    color: #999;
+    font-weight: bold;
+}
+
+#question-list {
+    border-top: 1px solid #DDDBCE;
+}
+
+ul.tags li {
+    height: 24px;
+    margin: -3px 6px 10px 0;
+}
+.categories-title, .section-title {
+    float: left;
+    color: #364395;
+    font-size: 30px;
+    line-height: 30px;
+    padding: 2px 2px 2px 0;
+    font-weight: normal;
+}
+
+/* Categories screen */
+
+.categories-list{
+    list-style-type: none;
+    border-top: 1px solid #DDDBCE;
+    margin: 0;
+    padding: 0;
+}
+.categories-list li{
+    list-style-type: none;
+    border-bottom: 1px solid #DDDBCE;
+    padding: 15px 0;
+    display: block;
+
+}
+
+.categories-list li .tag-li a{
+    min-height: 100px;
+    font-size: 24px;
+    color: #1892d4;
+    font-weight: bold;
+}
+.categories-list li .tag-li{
+    height: 100px;
+    width: 40%;
+    float: left;
+}
+.categories-list li .description{
+    min-height: 100px;
+    float: right;
+    padding: 0 0 0 5px;
+    width: 60%;
+}
+
+#CategoryHead{
+    display: block;
+    line-height: 170%;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+#CategoryHead li{
+    height: auto;
+    margin: 0;
+}
+#CategoryHead .tag-a{
+    border: none;
+    border-radius: 0px;
+    color: #1892D4;
+    font-weight: bold;
+    padding: 0;
+    text-decoration: none;
+    font-size: 36px;
+    line-height: 36px;
+}
+
+#selectedCategory .left{
+
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+}
+
+/* Other */
+
+.content-wrapper{
+    width: 1100px;
+}
+#ContentLeft{
+    width: 830px;
+}
+.content-wrapper{
+    width: 1100px;
+}
+
+.box h2 {
+    float: left;
+    color: #364395;
+    font-size: 30px !important;
+    line-height: 30px;
+    padding: 4px 2px 8px 0;
+    font-weight: normal;
+    background: none;
+    width: 230px;
+    border-bottom: 1px solid #DDDBCE;
+    text-align: left;
+}
+
+.box .contributorback{
+    background: none;
+}
+#ContentRight {
+    width: 230px;
+}
+
+.box {
+    padding: 2px 0 0;
 }

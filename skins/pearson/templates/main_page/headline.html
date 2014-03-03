@@ -1,23 +1,24 @@
 {% import "macros.html" as macros %}
 {% if questions_count > 0 %}
-        <h1 id="questionCount" class="search-result-summary">
+        <div id="selectedCategory" {% if not search_tags %}style="display: none;"{% endif %} >
+        {{ macros.tag_list_widget(
+        search_tags,
+        id = 'CategoryHead',
+        deletable = False,
+        make_links = False,
+        search_state = search_state
+        )
+        }}
+        </div>
+<div class="clearfix"></div>
+        <h1 id=" " class="section-title">
             {{ questions_count|intcomma }} {{ settings.WORDS_QUESTIONS_COUNTABLE_FORMS|py_pluralize(questions_count) }}
         {% if author_name %}
             {% trans %}with {{author_name}}'s contributions{% endtrans %}
         {% endif %}
         </h1>
-        <div class="clearfix"></div>
-        <div id="listSearchTags" {% if not search_tags %}style="display: none;"{% endif %}>
-            <span class="left">{% trans %}Tagged{% endtrans %}</span>
-            {{ macros.tag_list_widget(
-                    search_tags,
-                    id = 'searchTags',
-                    deletable = True,
-                    make_links = False,
-                    search_state = search_state
-                )
-            }}
-        </div>
+
+
         {#% if author_name or search_tags or query %}
             <p class="search-tips"><b>{% trans %}Search tips:{% endtrans %}</b> 
             {% if reset_method_count > 1 %}

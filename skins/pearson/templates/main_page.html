@@ -13,8 +13,9 @@
 {% endblock %}
 {% block title %}{% spaceless %}{% trans %}Questions{% endtrans %}{% endspaceless %}{% endblock %}
 {% block content %}
-    {% include "main_page/tab_bar.html" %}
     {% include "main_page/headline.html" %}
+    {% include "main_page/tab_bar.html" %}
+<div class="clearfix"></div>
     {# ==== BEGIN: main_page/content.html === #}
     <div id="question-list">
         {% include "main_page/questions_loop.html" %}

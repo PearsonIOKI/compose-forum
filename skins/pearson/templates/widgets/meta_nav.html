@@ -1,7 +1,7 @@
 <ul id="menu" class="nav navbar-nav navbar-left">
 <a class="composeforum-brand" href="/">PearsonStrap Home</a>
 	<li  {% if active_tab == 'tags' %}class="active"{% endif %}>
-		<a href="{% url tags %}"><i class="icon-tags"></i> {% trans %}tags{% endtrans %}</a>
+		<a href="{% url tags %}"><i class="icon-tags"></i> {% trans %}categories{% endtrans %}</a>
 	</li>
 	{% if settings.GROUPS_ENABLED %}
 		<li  class="groups_dropdown dropdown {% if active_tab == 'groups' %}active{% endif %}">
