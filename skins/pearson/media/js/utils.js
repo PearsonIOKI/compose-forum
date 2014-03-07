@@ -1500,13 +1500,13 @@ ModalDialog.prototype.createDom = function() {
     element.append(footer);
 
     var accept_btn = this.makeElement('button');
-    accept_btn.addClass('submit');
+    accept_btn.addClass('btn btn-success');
     accept_btn.html(this._accept_button_text);
     footer.append(accept_btn);
 
     if (this._reject_button_text) {
         var reject_btn = this.makeElement('button');
-        reject_btn.addClass('submit cancel');
+        reject_btn.addClass('btn btn-danger');
         reject_btn.html(this._reject_button_text);
         footer.append(reject_btn);
     }

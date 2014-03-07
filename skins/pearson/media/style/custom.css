@@ -1,46 +1,48 @@
 body {
-	background-color: #fff;
+    background-color: #fff;
 }
 
 button.close {
-  box-shadow: initial;
+    box-shadow: initial;
 }
 
 body.user-messages {
-  margin-top: initial;
+    margin-top: initial;
 }
 
 .pearsonstrap_notify {
-  text-align: center;
-  margin-bottom: initial;
+    text-align: center;
+    margin-bottom: initial;
 }
-header.navbar.navbar-default{
+
+header.navbar.navbar-default {
     border-radius: 0;
 }
- /* Sticky footer styles
-      -------------------------------------------------- */
+
+/* Sticky footer styles
+     -------------------------------------------------- */
 
 .pearson_footer_wrapper {
-  width: 100%;
-  clear: both;
-  background: #364395;
+    width: 100%;
+    clear: both;
+    background: #364395;
 
 }
 
 .composeforum-brand {
-  float: left;
-  display: block;
-  width: 115px;
-  height: 50px;
-  padding: 0;
-  margin: 0 20px 0 0;
-  font-size: 20px;
-  font-weight: 200;
-  color: #fff;
-  background-image: url("../images/composeforum.png");
-  text-indent: 200%;
-  white-space: nowrap;
-  overflow: hidden;
+    float: left;
+    display: block;
+    width: 115px;
+    height: 50px;
+    padding: 0;
+    margin: 0 20px 0 0;
+    font-size: 20px;
+    font-weight: 200;
+    color: #fff;
+    background-image: url("../images/composeforum.png");
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .composeforum-brand:hover {
@@ -49,12 +51,16 @@ header.navbar.navbar-default{
 
 /* Secondary header styles
      -------------------------------------------------- */
-#myTab{
+#myTab {
     padding-left: 20px;
+    height: 42px;
 }
-.ask-button-widget{
+
+.ask-button-widget {
     padding-right: 20px;
+    margin-top: -4px;
 }
+
 #NewSearchBar {
     width: 350px;
     margin-right: 20px;
@@ -94,7 +100,7 @@ input[type="submit"].searchBtn {
     width: 20px;
 }
 
-.input-tool-tip {
+#NewSearchBar .input-tool-tip {
     color: #999999;
     left: 15px;
     position: absolute;
@@ -105,6 +111,10 @@ input[type="submit"].searchBtn {
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px;
 
+}
+
+.input-group-addon:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child), .input-group .form-control:not(:first-child):not(:last-child) {
+    border-radius: 4px;
 }
 
 .circle {
@@ -127,19 +137,21 @@ input[type="submit"].searchBtn {
     top: 3px;
 }
 
-#SortBar a{
+#SortBar a, .tabBar a {
     color: #999;
     padding: 0 7px;
 }
-#SortBar{
+
+#SortBar {
     margin-top: 32px;
 }
-#SortBar a.on{
+
+#SortBar a.on, .tabBar a.on, .tabBar [classname="on"] {
     color: #428bca;
     font-weight: bold;
 }
 
-.triangle{
+.triangle {
     font-size: 8px;
 }
 
@@ -152,21 +164,21 @@ input[type="submit"].searchBtn {
 .short-summary .counts {
     margin: 20px 0 0 5px;
 }
-.short-summary .votes, .short-summary .answers, .short-summary .favorites, .short-summary .views{
+
+.short-summary .votes, .short-summary .answers, .short-summary .favorites, .short-summary .views {
     border: 1px solid #DDDBCE;
     float: right;
-    height: 50px;
+    height: 52px;
     margin: 0 4px;
     padding: 4px 2px 0;
     text-align: center;
     width: 70px;
     border-radius: 5px;
+    background: none;
 }
 
-.short-summary .counts .votes div, .short-summary .counts .views div, .short-summary .counts .answers div, .short-summary .counts .favorites div, .short-summary .counts .item-count{
-    color: #428BCA;
-    font-size: 14px;
-    line-height: 1.2;
+.short-summary .counts .votes div, .short-summary .counts .views div, .short-summary .counts .answers div, .short-summary .counts .favorites div {
+    margin-top: 0;
 }
 
 .short-summary h2 a, .h2 {
@@ -199,7 +211,8 @@ ul.tags, ul.tags.marked-tags, ul#related-tags {
     color: #999;
     cursor: pointer !important;
 }
-.userinfo a{
+
+.userinfo a {
     color: #999;
     font-weight: bold;
 }
@@ -212,8 +225,8 @@ ul.tags li {
     height: 24px;
     margin: -3px 6px 10px 0;
 }
+
 .categories-title, .section-title {
-    float: left;
     color: #364395;
     font-size: 30px;
     line-height: 30px;
@@ -221,15 +234,20 @@ ul.tags li {
     font-weight: normal;
 }
 
+.main.section-title {
+    float: left;
+}
+
 /* Categories screen */
 
-.categories-list{
+.categories-list {
     list-style-type: none;
     border-top: 1px solid #DDDBCE;
     margin: 0;
     padding: 0;
 }
-.categories-list li{
+
+.categories-list li {
     list-style-type: none;
     border-bottom: 1px solid #DDDBCE;
     padding: 15px 0;
@@ -237,36 +255,40 @@ ul.tags li {
 
 }
 
-.categories-list li .tag-li a{
+.categories-list li .tag-li a {
     min-height: 100px;
     font-size: 24px;
     color: #1892d4;
     font-weight: bold;
 }
-.categories-list li .tag-li{
+
+.categories-list li .tag-li {
     height: 100px;
     width: 40%;
     float: left;
 }
-.categories-list li .description{
+
+.categories-list li .description {
     min-height: 100px;
     float: right;
     padding: 0 0 0 5px;
     width: 60%;
 }
 
-#CategoryHead{
+#CategoryHead {
     display: block;
     line-height: 170%;
     list-style: none outside none;
-    margin: 0;
+    margin: 20px 0 0;
     padding: 0;
 }
-#CategoryHead li{
+
+#CategoryHead li {
     height: auto;
     margin: 0;
 }
-#CategoryHead .tag-a{
+
+#CategoryHead .tag-a {
     border: none;
     border-radius: 0px;
     color: #1892D4;
@@ -277,7 +299,7 @@ ul.tags li {
     line-height: 36px;
 }
 
-#selectedCategory .left{
+#selectedCategory .left {
 
     font-weight: bold;
     font-size: 36px;
@@ -286,13 +308,15 @@ ul.tags li {
 
 /* Other */
 
-.content-wrapper{
+.content-wrapper {
     width: 1100px;
 }
-#ContentLeft{
+
+#ContentLeft {
     width: 830px;
 }
-.content-wrapper{
+
+.content-wrapper {
     width: 1100px;
 }
 
@@ -304,18 +328,361 @@ ul.tags li {
     padding: 4px 2px 8px 0;
     font-weight: normal;
     background: none;
-    width: 230px;
+    width: 250px;
     border-bottom: 1px solid #DDDBCE;
     text-align: left;
 }
 
-.box .contributorback{
+.box a.followed, .box a.follow {
+    display: inline-block;
+}
+
+.box .contributorback {
     background: none;
 }
+
 #ContentRight {
-    width: 230px;
+    width: 250px;
 }
 
 .box {
     padding: 2px 0 0;
+}
+
+.avatar-box {
+    padding-right: 2px;
+    height: 48px;
+    text-decoration: none;
+    width: 48px;
+}
+
+/* Question page */
+
+.question-page .tabBar-answer {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.tabBar {
+    background: none;
+    border: 1px solid #DDDBCE;
+    height: auto;
+    padding: 10px;
+}
+
+.label-label {
+    float: left;
+    margin-right: 10px;
+}
+
+#questionCount {
+    margin: 0;
+    padding: 0;
+    color: #364395;
+}
+
+.question-page #questionCount {
+    font-size: 24px;
+    line-height: 20px;
+}
+
+.question-page .post-update-info {
+    padding: 0;
+}
+
+.question-page .post {
+
+    border-bottom: 1px solid #DDDBCE;
+}
+
+.question-page .controls a, .question-page .controls .icon-comment {
+    color: #1892D4;
+    font-size: 18px;
+    margin: 0;
+    padding-left: 3px;
+}
+
+.question-page .post-controls {
+    float: right;
+    padding-top: 20px;
+    padding-right: 20px;
+
+}
+
+.question-page .post-controls a {
+    color: #999999;
+    padding: 0 7px;
+    margin: 0;
+}
+
+.question-page .post-controls i, .dropdown-toggle {
+    color: #999999;
+}
+
+.question-page .question .post-body, .question-page .post-body {
+    border-bottom: 1px dotted #DDDBCE;
+    padding: 20px 5px 20px 0;
+    max-width: 100%;
+}
+
+.question-page h2.comment-title {
+    color: #1892D4;
+}
+
+a.edit {
+    color: #999999;
+}
+
+.question-page .post-controls span.dropdown-toggle {
+
+}
+
+.question-page .post {
+    padding: 10px;
+}
+
+.question-page .post-update-info p {
+    padding: 5px 0 5px 5px;
+}
+
+.question-page .comments .comment-votes {
+    padding: 12px 3px 0px 9px;
+}
+
+.question-page .comments .upvote {
+    padding-right: 14px;
+}
+
+.user-card {
+    padding-left: 5px;
+}
+
+.question-page .comments .post-comments {
+    margin-top: 10px;
+}
+
+.question-page .answered-by-owner, .question-page .answered-by-owner .comments div.controls, .question-page .answered-by-owner .comments .button, .question-page .answered-by-owner .comments .content {
+    background: none repeat scroll 0 0 #F4FCFF;
+}
+
+.question-page .comments .content .comment {
+    background: none repeat scroll 0 0 #F5F5F5;
+    margin: 0;
+}
+
+.question-page .answered-by-owner .comments, .question-page .answered-by-owner .comments .comment {
+    background-color: #FFFFFF;
+}
+
+.question-page .comments div.controls {
+    margin: 0;
+    padding: 10px;
+}
+
+.question-page .comments .content {
+    margin: 0;
+}
+
+.question-page .answer .post-content {
+    border-bottom: none;
+}
+
+.question-page .comments .comment-body p {
+    font-size: 14px;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.question-page .answer-img-accept {
+    margin: 10px 0;
+}
+
+.question-page .comments textarea {
+    color: #666666;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.3;
+    margin: 0;
+    min-height: 50px;
+    outline: medium none;
+    overflow: auto;
+    padding: 5px 5px 5px 10px;
+    width: 100%;
+}
+
+.ask-page .post-comments .wmd-container, .question-page .post-comments .wmd-container, .edit-question-page .post-comments .wmd-container, .edit-answer-page .post-comments .wmd-container {
+    margin-left: 0;
+}
+
+.answered-by-owner .post-comments, .answered-by-owner .post-comments {
+    background: none repeat scroll 0 0 #F4FCFF;
+    margin-top: 10px;
+}
+
+.question-page #fmanswer h2 {
+    color: #364395;
+}
+
+.question-page .post-update-info {
+    font-size: 14px;
+    line-height: 17px;
+    border: 1px solid #F8F8FF;
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+
+.question-page .post-update-info .reputation-score {
+    font-weight: bold;
+    font-size: 18px;
+    color: #364395;
+
+}
+
+.question-page .post-update-info .user-card a {
+    color: #1B79BD;
+    font-size: 90%;
+}
+
+/* Other */
+
+.wmd-container, a.medal {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+
+.edit-button-bottom {
+    margin: 30px 0 50px 20px;
+}
+
+.btn {
+    margin: 4px;
+}
+
+.editor-proper .checkbox {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.editor-proper, .folded-editor {
+    margin-bottom: 50px;
+    box-shadow: none;
+}
+
+.editor-proper .proxy-user-info {
+    margin-bottom: 30px;
+}
+
+.short-summary .item-count {
+    line-height: 25px;
+    width: 60px;
+}
+
+#ContentFull {
+    min-height: 500px;
+}
+
+.user-activity .timestamp {
+    width: 140px;
+}
+
+.short-summary .accepted .item-count {
+    width: 60px;
+    color: #008B5D;
+}
+
+.short-summary .some-votes .item-count {
+    color: #364395;
+}
+
+.short-summary .some-answers .item-count {
+    color: #ED6B06;
+}
+
+.short-summary .some-views .item-count {
+    color: #9D1248;
+}
+
+.short-summary .no-answers .item-count, .short-summary .no-votes .item-count, .short-summary .no-views .item-count {
+    color: #999999;
+}
+
+.settings-nav {
+    background: none;
+}
+
+.settings-nav h2 {
+    background: none repeat scroll 0 0 #364395;
+}
+
+.dropdown-menu {
+    margin: 0;
+    min-width: 250px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin: 0;
+}
+
+label {
+    font-weight: normal;
+}
+
+.box label {
+    vertical-align: middle;
+}
+
+.users-page .wmd-container {
+    min-height: 100px;
+}
+
+.users-page .wmd-container textarea {
+    min-height: 60px;
+    width: inherit;
+}
+
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    float: none;
+}
+
+.tabsA a, .tabsC a {
+    border-left: 1px solid #999999;
+}
+
+.user-card .avatar-box {
+    margin: 0 -4px 0 4px;
+    padding: 0;
+}
+
+.post-update-info .user-info {
+    margin-top: -2px;
+}
+
+#ContentRight .box h2 {
+    font-size: 24px;
+}
+
+.preview-toggle {
+    color: #1B79BD;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+.user-profile-page h3 {
+    margin-top: 3px;
+}
+.scoreNumber {
+    font-size: 24px;
+    line-height: 30px;
+}
+#ContentFull .count{
+    font-size: 150%;
+    color: #364395;
+}
+.user-profile-page h2, .scoreNumber, .score-karma{
+    color: #364395;
+}
+.user-stats-table .tag-li{
+    display: inline-block;
+}
+.user-stats-table .tag-number{
+    display: inline-block;
+    float: none;
+    margin-left: 5px;
 }

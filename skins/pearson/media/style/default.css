@@ -6,7 +6,7 @@
 /* CSS3 Elements */
 /* Library of predifined less functions styles */
 /* ----- General HTML Styles----- */
-/*body {
+body {
   background: #FFF;
   font-size: 14px;
   line-height: 150%;
@@ -78,14 +78,14 @@ textarea:focus,
 input:focus {
   outline: none;
 }
-input[type="text"],
+
 input[type="password"],
 select,
 textarea,
 #askFormBar .questionTitleInput,
 .wmd-container,
 .folded-editor {
-  border: #cce6ec 3px solid;
+  border: #1892D4 1px solid;
   height: 22px;
   font-size: 13px;
   padding: 0 5px;
@@ -136,7 +136,7 @@ pre {
   background-color: #F5F5F5;
   padding-left: 5px;
   padding-top: 5px;
-  padding-bottom: 20px ! ie7;
+  padding-bottom: 20px;
 }
 code {
   font-family: Consolas, Monaco, Liberation Mono, Lucida Console, Monospace;
@@ -150,7 +150,7 @@ blockquote {
 }
 html {
   overflow-y: scroll;
-}*/
+}
 /* http://pathfindersoftware.com/2007/09/developers-note-2/ */
 /** html .clearfix,
 * html .paginator {
@@ -516,15 +516,16 @@ body.user-messages {
 }
 #searchBar {
   /* Main search form , check widgets/search_bar.html */
-
+/*
   border: 1px solid #c9c9b5;
   background: white;
   height: 41px;
-  z-index: 1000;
-  position: relative;
-  width: 100%;
-  /* the guts are absolute-positioned */
 
+
+  /* the guts are absolute-positioned */
+    width: 100%;
+    z-index: 1000;
+    position: relative;
 }
 #searchBar input.searchInput,
 #searchBar div.input-tool-tip,
@@ -586,7 +587,7 @@ body.user-messages {
   -webkit-box-sizing: border-box;
   background: whitesmoke;
   border-top: none;
-  bottom: -50px;
+ // bottom: -50px;
   margin: 0;
   outline: 1px solid #dadad4;
   position: absolute;
@@ -812,7 +813,7 @@ form.ajax-file-upload img.spinner {
 }
 #askButton {
   /* check blocks/secondary_header.html and widgets/ask_button.html*/
-
+/*
   float: right;
   font-size: 20px;
   height: 42px;
@@ -820,6 +821,7 @@ form.ajax-file-upload img.spinner {
   margin: -1px 0 0 0;
   text-transform: uppercase;
   width: 200px;
+  */
   /* to match width of sidebar */
 
 }
@@ -966,6 +968,7 @@ body.anon.ask-page .search-drop-menu {
 }
 .box a.followed,
 .box a.follow {
+  /*
   height: 34px;
   font-size: 21px;
   line-height: 34px;
@@ -975,6 +978,7 @@ body.anon.ask-page .search-drop-menu {
   display: block;
   margin: 0 auto;
   padding: 0;
+  */
   width: 130px;
 }
 .box a.followed div.unfollow {
@@ -985,7 +989,7 @@ body.anon.ask-page .search-drop-menu {
 }
 .box a.followed:hover div.unfollow {
   display: inline;
-  color: #a05736;
+  text-decoration: none;
 }
 .box .favorite-number {
   padding: 5px 0 0 5px;
@@ -1065,7 +1069,7 @@ body.anon.ask-page .search-drop-menu {
   margin-bottom: 3px;
   margin-top: 3px;
   float: right;
-  font-family: Georgia, serif;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
   font-size: 16px;
   border-radius: 5px;
   -ms-border-radius: 5px;
@@ -1139,7 +1143,7 @@ body.anon.ask-page .search-drop-menu {
   padding-top: 3px;
   background: #ffffff url(../images/feed-icon-small.png) no-repeat center right;
   float: right;
-  font-family: Georgia, serif;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
   font-size: 16px;
 }
 .rss:hover {
@@ -2036,6 +2040,7 @@ ul#related-tags li {
   margin-bottom: 10px;
 }
 /* ----- Question template ----- */
+
 .question-page h1 {
   padding-top: 0px;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -2109,13 +2114,14 @@ ul#related-tags li {
 }
 .question-page .question .post-body {
   margin-top: 8px;
-  border-top: #f0f0f0 1px solid;
+  border-top: #DDDBCE 1px solid;
   padding-top: 10px;
 }
 .question-page .post-update-info-container {
   float: right;
   width: 175px;
 }
+
 .question-page .post-update-info {
   background: #ffffff url(../images/background-user-info.png) repeat-x bottom;
   float: right;
@@ -2152,6 +2158,7 @@ ul#related-tags li {
   line-height: 13px;
   font-size: 10px;
 }
+/*
 .question-page .post-controls {
   clear: left;
   float: right;
@@ -2164,6 +2171,8 @@ ul#related-tags li {
   padding-left: 5px;
   text-align: right;
 }
+*/
+/*
 .question-page .post-controls a,
 .question-page .post-controls span.dropdown-toggle {
   color: #777;
@@ -2182,6 +2191,7 @@ ul#related-tags li {
 .question-page .post-controls span.dropdown-toggle:hover {
   background-color: #f5f0c9;
 }
+*/
 .question-page .post-controls span.dropdown-toggle {
   background: url(../images/sprites.png) no-repeat -7px -242px;
   border-radius: 3px;
@@ -2233,6 +2243,8 @@ ul#related-tags li {
   height: 18px;
   font-size: 18px;
 }
+
+/*
 .question-page .post-controls .question-delete,
 .question-page .answer-controls .question-delete {
   background: url(../images/delete.png) no-repeat left -1px;
@@ -2270,7 +2282,7 @@ ul#related-tags li {
 .question-page .answer-controls .answer-convert {
   float: right;
   clear: left;
-  /*background: url(../images/link.png) no-repeat center left;*/
+
 
 }
 .question-page .post-controls .answer-convert input,
@@ -2303,6 +2315,7 @@ ul#related-tags li {
   -webkit-border-radius: 3px;
   -khtml-border-radius: 3px;
 }
+*/
 .question-page .tabBar {
   width: 100%;
 }
@@ -2320,10 +2333,12 @@ ul#related-tags li {
 .question-page div.comments {
   padding: 0;
 }
+/*
 .question-page div.comments.empty {
   margin-top: -34px;
   float: left;
 }
+*/
 .question-page h2.comment-title {
   color: #7ea9b3;
   font-weight: bold;
@@ -2351,6 +2366,7 @@ ul#related-tags li {
 .question-page .comments .edit-comment-buttons .checkbox {
   margin: 3px;
 }
+/*
 .question-page .comments .controls a {
   border: none;
   color: #988e4c;
@@ -2385,6 +2401,7 @@ ul#related-tags li {
   border-bottom: 1px solid #edeeeb;
   margin-bottom: 0;
 }
+*/
 .question-page .comments textarea {
   box-sizing: border-box;
   color: #666;
@@ -2740,6 +2757,7 @@ ul#related-tags li {
 /* -----Content pages, Login, About, FAQ, Users----- */
 .openid-signin input[type="text"],
 .openid-signin input[type="password"] {
+    /*
   color: #525252;
   font-size: 12px;
   line-height: 25px;
@@ -2747,6 +2765,7 @@ ul#related-tags li {
   margin: 0px;
   padding: 0 5px;
   width: 200px;
+  */
 }
 .registration-page .login input[type="text"] {
   height: 22px;
@@ -2759,8 +2778,8 @@ ul#related-tags li {
 .openid-signin,
 .meta,
 .user-profile-edit-page {
-  font-size: 13px;
-  line-height: 1.3;
+  // font-size: 13px;
+  // line-height: 1.3;
   color: #525252;
 }
 .openid-signin p,
@@ -2798,18 +2817,22 @@ ul#related-tags li {
 .users-page select,
 .user-profile-edit-page select,
 .user-profile-page select {
+    /*
   height: 25px;
   line-height: 25px;
   padding-left: 5px;
   width: 395px;
   font-size: 14px;
+  */
 }
 .meta select,
 .users-page select,
 .user-profile-edit-page select,
 .user-profile-page select {
+    /*
   width: 405px;
   height: 30px;
+  */
 }
 .meta textarea,
 .users-page textarea,
@@ -4376,8 +4399,21 @@ td.setting-input textarea {
   background-color: Highlight;
   color: HighlightText;
 }
+
+@media screen and (max-width: 990px) {
+
+    #NewSearchBar{
+        width: 180px !important;
+    }
+    .input-tool-tip{
+        display: none;
+    }
+}
 /* modifications for small screens */
 @media screen and (max-width: 960px) {
+
+
+
   /* content margins touch viewport */
   * {
     box-sizing: border-box;
@@ -4413,7 +4449,15 @@ td.setting-input textarea {
     height: 20px;
   }
 }
+
 @media screen and (max-width: 800px) {
+
+  #NewSearchBar {
+    width: 100% !important;
+  }
+  .input-tool-tip{
+    display: block;
+  }
   body {
     padding: 0;
   }
@@ -4449,8 +4493,9 @@ td.setting-input textarea {
   .tabBar,
   .tags,
   .userinfo,
-  .widgets {
-    display: none;
+  .widgets,
+  .tabs-li{
+    display: none !important;
   }
   .ask-page input[type="submit"].searchBtn,
   .edit-question-page input[type="submit"].searchBtn {
