@@ -13,17 +13,17 @@ settings.UNANSWERED_SCOPE_ENABLED|to_int +
         {% set search_state=search_state|get_empty_search_state %}
         {% endif %}
         {% if settings.ALL_SCOPE_ENABLED %}
-        <li class="{% if scope == 'all' %}active{% endif %}">
+        <li class="tabs-li {% if scope == 'all' %}active{% endif %}">
             <a href="{{ search_state.change_scope('all').full_url() }}">{% trans %}ALL{% endtrans %}</a>
         </li>
         {% endif %}
         {% if settings.UNANSWERED_SCOPE_ENABLED %}
-        <li class="{% if scope == 'unanswered' %}active{% endif %}">
+        <li class="tabs-li {% if scope == 'unanswered' %}active{% endif %}">
             <a href="{{ search_state.change_scope('unanswered').change_sort('answers-asc').full_url() }}">{{ settings.WORDS_UNANSWERED|escape }}</a>
         </li>
         {% endif %}
         {% if request.user.is_authenticated() and settings.FOLLOWED_SCOPE_ENABLED %}
-        <li class="{% if scope == 'followed' %}active{% endif %}">
+        <li class="tabs-li {% if scope == 'followed' %}active{% endif %}">
             <a href="{{ search_state.change_scope('followed').full_url() }}">{% trans %}FOLLOWED{% endtrans %}</a>
         </li>
         {% endif %}

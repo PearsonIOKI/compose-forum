@@ -231,7 +231,7 @@
                 if (extra_comment_count > 0){
                     var text = "{% trans %}see more comments{% endtrans%}";
                 } else {
-                    var text = "{% trans %}add a comment{% endtrans %}";
+                    var text = "{% trans %}<i class='icon-comment'></i> add a comment{% endtrans %}";
                 }
                 var add_comment_btn = document.getElementById('add-comment-to-post-' + post_id);
                 add_comment_btn.innerHTML = text;
@@ -334,7 +334,7 @@
         askbot['data']['answersSortTab'] = '{{ tab_id }}';
         askbot['data']['questionId'] = {{ question.id }};
         askbot['data']['threadSlug'] = '{{ thread.title|slugify }}';
-        askbot['messages']['addComment'] = '{% trans %}add a comment{% endtrans %}';
+        askbot['messages']['addComment'] = '<i class="icon-comment"></i> {% trans %}add a comment{% endtrans %}';
         askbot['messages']['userNamePrompt'] = '{% trans %}User name:{% endtrans %}';
         askbot['messages']['userEmailPrompt'] = '{% trans %}Email address:{% endtrans %}';
         askbot['settings']['saveCommentOnEnter'] = {{ settings.SAVE_COMMENT_ON_ENTER|as_js_bool }};

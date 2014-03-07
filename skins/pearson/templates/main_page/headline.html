@@ -11,7 +11,7 @@
         }}
         </div>
 <div class="clearfix"></div>
-        <h1 id=" " class="section-title">
+        <h1 id=" " class="main section-title">
             {{ questions_count|intcomma }} {{ settings.WORDS_QUESTIONS_COUNTABLE_FORMS|py_pluralize(questions_count) }}
         {% if author_name %}
             {% trans %}with {{author_name}}'s contributions{% endtrans %}

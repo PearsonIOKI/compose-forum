@@ -391,8 +391,9 @@ for the purposes of the AJAX comment editor #}
 -%}
     {% spaceless %}
     {% if post.comment_count > 0 %}
+
+        <div class="clean"></div>
         <h2 class="comment-title">{% trans %}Comments{% endtrans %}</h2>
-        <div class="clean"></div> 
     {% endif %}
     {% set widget_id = 'comments-for-' + post.post_type + '-' + post.id|string %}
     <div class="comments{% if post.comment_count == 0 %} empty{% endif %}" id="{{ widget_id }}">
@@ -402,6 +403,7 @@ for the purposes of the AJAX comment editor #}
             {% else %}
                 {% set comments = post.get_cached_comments()[:max_comments] %}
             {% endif %}
+
             {% for comment in comments %}
                 {# Warning! Any changes to the comment markup IN THIS `FOR` LOOP must be duplicated in post.js
                    for the purposes of the AJAX comment editor #}
@@ -578,9 +580,9 @@ for the purposes of the AJAX comment editor #}
         id="follow-{{ name|escape }}-{{ id }}"
     >
         {% if follow %}
-        <div class="follow">{% trans %}follow {{alias}}{% endtrans %}</div>
+        <div class=" btn btn-success follow">{% trans %}follow {{alias}}{% endtrans %}</div>
         {% else %}
-        <div class="unfollow">
+        <div class="btn btn-default unfollow">
           <div class="unfollow-red">{% trans %}unfollow {{alias}}{% endtrans %}</div>
           <div class="unfollow-green">{% trans %}following {{alias}}{% endtrans %}</div>
         </div>
