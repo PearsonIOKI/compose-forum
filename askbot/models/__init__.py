@@ -3553,7 +3553,7 @@ def greet_new_user(user, **kwargs):
 
     data = {
         'site_name': askbot_settings.APP_SHORT_NAME,
-        'site_url': site_url(reverse('questions')),
+        'site_url': site_url(reverse('tags')),
         'ask_address': 'ask@' + askbot_settings.REPLY_BY_EMAIL_HOSTNAME,
         'can_post_by_email': user.can_post_by_email()
     }
