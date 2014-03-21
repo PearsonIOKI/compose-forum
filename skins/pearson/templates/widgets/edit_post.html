@@ -1,3 +1,7 @@
+{% import "macros.html" as macros %}
+{% include "tags/header.html" %}
+
+
 {% if editor_type == 'markdown' %}
     <div class="wmd-container">
         <div id="wmd-button-bar" class="wmd-panel"></div>
@@ -21,9 +25,11 @@
 {# need label element for resizable input, b/c form validation won't find span #}
 {% if post_type == 'question' %}
     <div class="form-item question-tags">
+
+        {{ macros.tag_cloud(tags=tags, font_sizes=font_size, search_state=search_state) }}
         {% if use_category_selector %}
             {% include "widgets/three_column_category_selector.html" %}
-            <div class="tags-desc">{% trans %}Tags{% endtrans %}</div>
+            <div class="tags-desc">Categories</div>
             {% include "widgets/tag_editor.html" %}
         {% else %}
             {% if tags_are_required %}

@@ -12,10 +12,11 @@
                 {{ macros.tag_widget(
                             tag=tag.name,
                             html_tag='div',
-                            truncate_long_tag=True,
-                            extra_content=' <div class="description">Category description here...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur euismod urna, suscipit semper felis laoreet ut. Proin congue libero non malesuada egestas. Praesent tincidunt consequat sem, consectetur ornare eros varius sed. Curabitur laoreet lectus vitae dui porttitor, sit amet dignissim massa iaculis.</div><div class="clearfix"></div>'
+                            extra_content=' '
                     )
                 }}
+                <div class="description {{ tag }}"> </div><div class="clearfix"></div>
+
             </li>
             {% endfor %}
         </ul>

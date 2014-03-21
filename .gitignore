@@ -43,7 +43,6 @@ askbot/fixtures
 dist
 *.egg-info
 build
-askbot/upfiles/
 askbot/upfiles/avatars/
 askbot/skins/common/media/mathjax/
 /jinja2
