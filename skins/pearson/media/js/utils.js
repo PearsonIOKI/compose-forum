@@ -4003,4 +4003,18 @@ $(function() {
       $(this).alert('close');
     }
   })
+
+// loading categotries description
+
+    $.ajax({
+        url: "/upfiles/categories.json",
+        dataType: "json",
+        success: function(data) {
+            $.each(data.Categories, function(index, element) {
+
+                $(".categories-list " + "." + element.name).text(element.description) ;
+
+            });
+        }
+    });
 });

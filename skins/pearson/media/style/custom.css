@@ -264,7 +264,7 @@ ul.tags li {
 
 .categories-list li .tag-li {
     height: 100px;
-    width: 40%;
+    width: 50%;
     float: left;
 }
 
@@ -272,7 +272,7 @@ ul.tags li {
     min-height: 100px;
     float: right;
     padding: 0 0 0 5px;
-    width: 60%;
+    width: 50%;
 }
 
 #CategoryHead {
@@ -663,6 +663,7 @@ label {
     color: #1B79BD;
     font-size: 18px;
     padding-bottom: 10px;
+    clear: both;
 }
 .user-profile-page h3 {
     margin-top: 3px;
@@ -685,4 +686,68 @@ label {
     display: inline-block;
     float: none;
     margin-left: 5px;
+}
+
+.tag-editor{
+    border: 1px solid #1892D4;
+    height: auto;
+    min-height: 36px;
+    padding-bottom: 6px;
+}
+
+.tag-left {
+    box-shadow: none;
+}
+.tags a.tag-right{
+    border: 1px solid #999999;
+    border-radius: 4px;
+    color: #333333;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 5px;
+    text-decoration: none;
+    outline: none;
+    height: auto;
+    line-height: inherit;
+    background: #fff;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+
+
+
+}
+
+.form-item.question-tags .tag-editor ul.tags li{
+    margin: 6px 10px 0px 0;
+    height: 22px;
+}
+
+.form-item.question-tags ul.tags, .form-item.question-tags ul.tags.marked-tags, .form-item.question-tags ul#related-tags {
+    line-height: 120%;
+}
+
+.delete-icon{
+    border-color: #999999 #999999 #999999 -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    height: 22px;
+    line-height: 20px;
+    margin-top: 0;
+    width: 20px;
+    text-shadow: none;
+    background: #EEEEEE;
+    color: #999999;
+}
+.delete-icon:hover {
+    background-color: #d2322d;
+    color: #ccc;
+}
+
+.tags-desc{
+    margin-top: 10px;
+}
+
+#question-list .short-summary h2{
+    margin-bottom: 25px;
 }
