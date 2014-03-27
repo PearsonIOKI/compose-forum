@@ -4004,7 +4004,7 @@ $(function() {
     }
   })
 
-// loading categotries description
+    // loading categotries description
 
     $.ajax({
         url: "/upfiles/categories.json",
@@ -4017,4 +4017,16 @@ $(function() {
             });
         }
     });
+
+    // removes dash from tags name
+
+    var tag = $('.tag');
+    $.each(tag, function(){
+
+        var str = $(this).text();
+        str = str.replace(/-/g, ' ');
+        $(this).text(str);
+
+    });
+
 });
