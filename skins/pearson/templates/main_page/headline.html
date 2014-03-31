@@ -1,0 +1,42 @@
+{% import "macros.html" as macros %}
+{% if questions_count > 0 %}
+        <div id="selectedCategory" {% if not search_tags %}style="display: none;"{% endif %} >
+        {{ macros.tag_list_widget(
+        search_tags,
+        id = 'CategoryHead',
+        deletable = False,
+        make_links = False,
+        search_state = search_state
+        )
+        }}
+        </div>
+<div class="clearfix"></div>
+        <h1 id=" " class="main section-title">
+            {{ questions_count|intcomma }} {{ settings.WORDS_QUESTIONS_COUNTABLE_FORMS|py_pluralize(questions_count) }}
+        {% if author_name %}
+            {% trans %}with {{author_name}}'s contributions{% endtrans %}
+        {% endif %}
+        </h1>
+
+
+        {#% if author_name or search_tags or query %}
+            <p class="search-tips"><b>{% trans %}Search tips:{% endtrans %}</b> 
+            {% if reset_method_count > 1 %}
+                {% if author_name %}
+                    <a href="{{ search_state.remove_author().full_url() }}">{% trans %}reset author{% endtrans %}</a>
+                {% endif %}
+                {% if search_tags %}{% if author_name and query %}, {% elif author_name %}{% trans %} or {% endtrans %}{% endif %}
+                    <a href="{{ search_state.remove_tags().full_url() }}">{% trans %}reset tags{% endtrans %}</a>
+                {% endif %}
+                {% if query %}{% trans %} or {% endtrans %}
+                    <a href="{% url questions %}">{% trans %}start over{% endtrans %}</a>
+                {% endif %}
+            {% else %}
+                <a href="{% url questions %}">{% trans %}start over{% endtrans %}</a>
+            {% endif %}
+            {% trans %} - to expand, or dig in by adding more tags and revising the query.{% endtrans %}
+            </p>
+        {% else %}
+            <p class="search-tips"><b>{% trans %}Search tip:{% endtrans %}</b> {% trans %}add tags and a query to focus your search{% endtrans %}</p>
+        {% endif %#}
+{% endif %}

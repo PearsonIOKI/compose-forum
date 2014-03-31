@@ -1,0 +1,20 @@
+<ul id="menu" class="nav navbar-nav navbar-left">
+<a class="composeforum-brand" href="/">PearsonStrap Home</a>
+	<li  {% if active_tab == 'tags' %}class="active"{% endif %}>
+		<a href="{% url tags %}"><i class="icon-tags"></i> {% trans %}categories{% endtrans %}</a>
+	</li>
+	{% if settings.GROUPS_ENABLED %}
+		<li  class="groups_dropdown dropdown {% if active_tab == 'groups' %}active{% endif %}">
+			<a href="{% url groups %}"  class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> {% trans %}people & groups{% endtrans %} <i class="icon-caret-down"></i></a>
+		</li>
+	{%else%}
+		<li {% if active_tab == 'users' %}class="active"{% endif %}>
+			<a href="{% url users %}"><i class="icon-user"></i> {% trans %}users{% endtrans %}</a>
+		</li>
+	{% endif %}
+	{% if settings.BADGES_MODE == 'public' %}
+	<li {% if active_tab == 'badges' %}class="active"{% endif %}>
+		<a href="{% url badges %}"><i class="icon-certificate"></i> {% trans %}badges{% endtrans %}</a>
+	</li>
+	{% endif %}
+</ul>

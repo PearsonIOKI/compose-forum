@@ -1,0 +1,32 @@
+{"Categories":
+    [
+        {
+            "name":"project-creation-and-administration",
+            "description":"Exchange of information on setting up new projects and administration of existing projects. If you have any issues or problems concerning your project, ask your question here."
+        },
+        {
+            "name":"authoring-primary-products",
+            "description":"Exchange of information and discussions concerning authoring Primary products."
+        },
+        {
+            "name":"authoring-adult-products",
+            "description":"Exchange of information and discussions concerning authoring Adult products. "
+        },
+        {
+            "name":"content-creation",
+            "description":"Hints and tips on creating new content. Adapting content for digital products and discussion of technical limitations and issues. Basic rules and ideas on setting up new content in Compose."
+        },
+        {
+            "name":"technical-support",
+            "description":"In case of technical issues with Compose, post your questions and/or description of the problem here."
+        },
+        {
+            "name":"wish-list",
+            "description":"Is there something you need to work in Compose more effectively? You have new ideas on improving the tool? Post and share your ideas with others!"
+        },
+        {
+            "name":"useful-resources",
+            "description":"If you have some interesting and useful materials on e-learning, technology and stuff, this is the right place to share them with your colleagues."
+        }
+    ]
+}

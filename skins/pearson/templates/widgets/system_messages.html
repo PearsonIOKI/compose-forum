@@ -1,0 +1,9 @@
+{% if user_messages %}
+  {% for message in user_messages %}
+    <div class="pearsonstrap_notify alert alert-warning ">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+</div>
