@@ -91,7 +91,9 @@
             }
             search.decorate(searchInput);
         } else if (activeTab === 'tags') {
-            var search = new TagSearch();
+            // search by question under Categories (Tags) tab
+            // default: new TagSearch();
+            var search = new FullTextSearch();
             search.decorate(searchInput);
         }
 

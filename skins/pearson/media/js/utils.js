@@ -4018,13 +4018,13 @@ $(function() {
         }
     });
 
-    // removes dash from tags name
+    // replace underscore with space
 
     var tag = $('.tag');
     $.each(tag, function(){
 
         var str = $(this).text();
-        str = str.replace(/-/g, ' ');
+        str = str.replace(/_/g, ' ');
         $(this).text(str);
 
     });
