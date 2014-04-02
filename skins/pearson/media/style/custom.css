@@ -751,3 +751,7 @@ label {
 #question-list .short-summary h2{
     margin-bottom: 25px;
 }
+
+#id_username{
+    border: 1px solid #1892D4;
+}
