@@ -29,7 +29,7 @@
         {{ macros.tag_cloud(tags=tags, font_sizes=font_size, search_state=search_state) }}
         {% if use_category_selector %}
             {% include "widgets/three_column_category_selector.html" %}
-            <div class="tags-desc">Categories</div>
+            <div class="tags-desc">Selected categories for this question:</div>
             {% include "widgets/tag_editor.html" %}
         {% else %}
             {% if tags_are_required %}
