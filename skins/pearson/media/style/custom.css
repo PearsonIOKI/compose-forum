@@ -704,11 +704,11 @@ label {
     color: #333333;
     font-size: 12px;
     font-weight: bold;
-    padding: 2px 5px;
+    padding: 0 5px;
     text-decoration: none;
     outline: none;
-    height: auto;
-    line-height: inherit;
+    height: 22px;
+    line-height: 20px;
     background: #fff;
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
@@ -727,7 +727,7 @@ label {
 }
 
 .delete-icon{
-    border-color: #999999 #999999 #999999 -moz-use-text-color;
+    border-color: #999999 #999999 #999999;
     border-image: none;
     border-style: solid solid solid none;
     border-width: 1px 1px 1px medium;
@@ -754,4 +754,44 @@ label {
 
 #id_username{
     border: 1px solid #1892D4;
+}
+
+.tag-editor{
+    border: none;
+    box-shadow: none;
+}
+.tag-editor input.new-tags-input, .tag-editor input.new-tags-input:focus{
+    background: none repeat scroll 0 0 #fff;
+}
+
+.select-box li{
+    list-style-type: disc;
+    font-weight: bold;
+}
+.category-selector ul.select-box{
+    border: none;
+    height: auto;
+
+}
+.question-instructions{
+    background-color: #D9EDF7;
+    border: 1px solid #BCE8F1;
+    color: #31708F;
+    box-shadow: none;
+    padding: 0;
+}
+
+.ask-page #fmask .categories-title{
+    display: none;
+}
+
+.ask-message {
+    float: left;
+    color: #364395;
+    font-size: 30px !important;
+    line-height: 30px;
+    padding: 4px 2px 8px 0;
+    font-weight: normal;
+    background: none;
+    text-align: left;
 }

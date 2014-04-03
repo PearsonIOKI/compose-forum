@@ -4666,7 +4666,8 @@ CategorySelectorLoader.prototype.decorate = function(element) {
     this._cancel_button = this.makeElement('button');
     this._cancel_button.html(gettext('cancel'));
     this._editor_buttons.append(this._cancel_button);
-    this._editor_buttons.find('button').addClass('submit');
+    this._editor_buttons.find('button').eq(0).addClass('btn btn-primary');
+    this._editor_buttons.find('button').eq(1).addClass('btn btn-danger');
     this._editor_buttons.addClass('retagger-buttons');
 
     //done button
