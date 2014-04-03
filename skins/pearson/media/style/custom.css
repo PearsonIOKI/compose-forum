@@ -775,7 +775,6 @@ label {
 }
 .question-instructions{
     background-color: #D9EDF7;
-    border: 1px solid #BCE8F1;
     color: #31708F;
     box-shadow: none;
     padding: 0;
@@ -794,4 +793,22 @@ label {
     font-weight: normal;
     background: none;
     text-align: left;
+}
+
+.category-selector td{
+    width: auto;
+}
+
+.select-box li.selected, .select-box li.selected:hover{
+    background-color: #428BCA;
+    color: #FFFFFF;
+}
+
+.select-box li:hover{
+    background-color: #f5f5f5;
+    color: #555555;
+}
+
+.category-selector tbody .cat-col-0{
+    margin: 5px 0;
 }
