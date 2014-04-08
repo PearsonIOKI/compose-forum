@@ -472,8 +472,7 @@ class WikiField(forms.BooleanField):
         self.required = False
         self.initial = False
         self.label = _(
-            'community wiki (karma is not awarded & '
-            'many others can edit wiki post)'
+            'community wiki (karma is not awarded and many others can edit wiki post)'
         )
 
     def clean(self, value):
